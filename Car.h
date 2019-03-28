@@ -2,12 +2,13 @@
 #define CAR_H
 #include <iostream>
 #include <string.h>
+#include <stdio.h>
 class Car{
-	char * brand;
+	char* brand;
 	int licence_number;
 	int owner_id;
 	int price;
-	Car * next;
+	Car* next;
 public:
 	Car(char *brand, int number, int id, int price); //constructor also prints all the data
 	~Car();//destructor also prints
@@ -17,7 +18,11 @@ public:
 	int get_licence_number();
 	int get_owner_id();
 	int get_price();
-	Car operator=(Car &car2);
+	void set_price(int);
+	Car* get_next();
+	void set_next(Car*);
+	Car operator=(Car);
+	Car** get_adr_of_next();
 
 };
 #endif
