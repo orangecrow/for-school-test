@@ -1,0 +1,28 @@
+There are 4 classess: item, passenger, airplane and airfiled.
+
+	Item is the class consisting a name and a type of object that can be stored by a passenger
+The items type will determine whether the said item is appropriate for carrying on a plane. 
+A passenger possessing an item that is of type "NOT_SAFE" shuld not be allowd to enter a plane.
+The items may be created and then cannot be changed.
+
+	Paassenger will have a name and a location (x and y coordinates) and a "luggage" which will be a list of items.
+He should be only able to enter the airports that are close enough to him ((for example 2 units) in a Cartesian sense)
+and only enter the planes from the airport he is in (only the ones that are landed there at the moment)
+He should be able to leave (airfileds and airports) without restrictions.
+When flying a plane, the location will change to that of the airport it is flyig to.
+He also should be able to add and remove items and item lists to and from his luggage and show his luggage contents.
+
+	Airfiled has a name, a location, a passenger list, a plane list and other airfiled list.
+There must not be two airfileds at the same location or with the same name.
+The first two lists represent objects that are curently present in the airfiled.
+Airfiled should act as a hub for passengers to enter the planes and planes to land and
+also be responsible for checking passengers luggage to decide whether they should enter the plane.
+The passengers can get a list of planes avaliable. 
+
+	Airplane has a name, location, capacity(number of seats), range, a messege, a pointer to the airfiled and a list of passengers.
+Airplanes should be able to fly to any airfiled that is in their range (in a Cartesian sense)
+It can only take as many passengers as the capacity lets it.
+If the airplane is destroyed when there are passengers inside the passengers are destroyed too (they die).
+the messege can be arbitrary but it will be visible when listing avaliable planes in the airfiled.
+(the idea is that it should state what is this plane's destination)
+
