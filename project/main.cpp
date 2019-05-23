@@ -5,20 +5,20 @@
 int main{
 passenger John;
 passenger Sara("Sara Smith", 1, 1);
-passenger Will("Will Smith", 0 , 0)
-item gun("gun",NOTSAFE) 
+passenger Will("Will Smith", 0 , 0);
+item gun("gun",NOTSAFE);
 item  tb;
 
 Sara.add_item(tb);
-Will.add_item(gun)
+Will.add_item(gun);
 
 airplane DC10[5];
 for(int i=0;i<5;++i)
-	DC10[i].fly(chopin)
+	DC10[i].fly(chopin);
 
-John.enter(gda)
-Will.enter(chopin)
-Sara.enter(chopin)
+John.enter(gda);
+Will.enter(chopin);
+Sara.enter(chopin);
 
 John.enter(DC10[0]);
 Will.enter(DC10[1]);

@@ -10,7 +10,7 @@ class item{
 	string name;
 	safety type;
 	public:
-	item(string name, saftey type);
+	item(string, saftey);
 	~item();
 	item(): string("tooth brush") type(SAFE){};
 }

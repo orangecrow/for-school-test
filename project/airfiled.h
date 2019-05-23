@@ -28,6 +28,6 @@ class airfiled{
 /*
 	void add_plane(plane);
 	void remove_plane(plane);
-	void add_passenger(passenger ); //leting a person enter the airport
+	void add_passenger(passenger ); //leting a person enter the 
 	void remove_passenger(passenger);
 	int bagage_control(passenger);*/

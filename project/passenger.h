@@ -13,18 +13,18 @@ class passenger{
 	string name;
 	int x,y;
 	list<item> luggage;
+	base *my_location;
 	public:
 	passenger(string name, int x, int y);
 	passenger(): name("John Smith"), x(0),y(0){}
 	~passenger();
-	operator+(item);
-	operator-(item);
-	operator-(list<item>);
-	operator+(list<item>);
+	int add_item(item);
+	int remove_item(item);
+	//int remove_item(list<item>);
+	//int add_item(list<item>);
 	void enter(airfiled);
 	void enter(airplane);
-	void leave(airfiled);
-	void leave(airplane);
+	void leave();
 	list<item> show_items();
 }
 #endif

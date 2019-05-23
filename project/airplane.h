@@ -6,7 +6,7 @@
 #ifndef AIRPLANE_H 
 #define AIRPLANE_H 
 using namespace std;
-class plane {
+class airplane {
 	int x,y;
 	string name;
 	int range;
@@ -15,9 +15,9 @@ class plane {
 	string messege;
 	list<passenger> people;
 	public:
-	plane(int seat_number, int range, int x ,int y);
-	~plane();
-	plane(): name("DC-10"), capacity(20), range(400), x(0), y(0) {}
+	airplane(int seat_number, int range, int x ,int y);
+	~airplane();
+	airplane(): name("DC-10"), capacity(20), range(400), x(0), y(0) {}
 	int set_messege(string);
 	string display_messege();
 	int fly(airfiled destination);
