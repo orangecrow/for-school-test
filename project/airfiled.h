@@ -8,15 +8,20 @@
 #ifndef AIRFILED_H 
 #define AIRFILED_H 
 using namespace std;
-class airfiled: base{
-	string name;
-	int x,y;
+class airfield: public base{
 	list<passenger> people;
-	list<airfiled> others;
+	list<airfield> others;
 	list<airplane> planes;
 	public:
-	airfiled(string name, int x , int y ); 
-	~airfiled();
+	get_in(passenger);
+	get_out(passenger);
+	get_out(airplane);
+	get_in(airplane);
+	//-----vuser functions
+	int check_luggage(passenger);
+	airfield(): name("generic airfied") {}
+	airfield(string name, int x , int y ); 
+	~airfield();
 	list<airplane> show_planes();
 }
 #endif

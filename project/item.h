@@ -7,13 +7,12 @@
 #define ITEM_H 
 using namespace std;
 enum safety {SAFE ,NOTSAFE};
-class item: base{
-	string name;
+class item: public base{
 	safety type;
 	public:
 	item(string, saftey);
 	~item();
-	item(): string("tooth brush") type(SAFE){};
+	item(): name("tooth brush") type(SAFE){};
 }
 #endif
 

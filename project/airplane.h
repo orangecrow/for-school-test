@@ -3,25 +3,23 @@
 #include<iterator>
 #include"base.h"
 #include<string>
-#include"airfiled.h"
+#include"airfield.h"
 #ifndef AIRPLANE_H 
 #define AIRPLANE_H 
 using namespace std;
-class airplane: base {
-	int x,y;
-	string name;
+class airplane: public base {
 	int range;
 	int capacity;
-	airfiled* my_location;
+	airfield* my_location;
 	string messege;
 	list<passenger> people;
 	public:
 	airplane(int seat_number, int range, int x ,int y);
 	~airplane();
-	airplane(): name("DC-10"), capacity(20), range(400), x(0), y(0) {}
+	airplane(): name("DC-10"), capacity(20), range(400)  {}
 	int set_messege(string);
 	string display_messege();
-	int fly(airfiled destination);
+	int fly(airfield destination);
 }
 #endif
 

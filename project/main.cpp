@@ -1,5 +1,5 @@
 #include"passenger.h"
-#include"airfiled.h"
+#include"airfield.h"
 #include"airplane.h"
 #include"item.h"
 int main{
@@ -24,9 +24,9 @@ John.enter(DC10[0]);
 Will.enter(DC10[1]);
 Sara.enter(DC10[2]);
 
-airfiled chopin("Chopin", 0 , 0);
-airfiled gda("Gdans", 84 , 126);
-airfiled usa("USA", 1500 , 1000);
+airfield chopin("Chopin", 0 , 0);
+airfield gda("Gdans", 84 , 126);
+airfield usa("USA", 1500 , 1000);
 
 DC10[0]fly(gda);
 DC10[1]fly(gda);
