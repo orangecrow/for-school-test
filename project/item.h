@@ -1,4 +1,5 @@
 #include<iostream>
+#include"base.h"
 #include<list>
 #include<iterator>
 #include<string>
@@ -6,7 +7,7 @@
 #define ITEM_H 
 using namespace std;
 enum safety {SAFE ,NOTSAFE};
-class item{
+class item: base{
 	string name;
 	safety type;
 	public:

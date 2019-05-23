@@ -5,10 +5,11 @@
 #include"airplane.h"
 #include"airfiled.h"
 #include"item.h"
+#include"base.h"
 #ifndef PASSENGER_H 
 #define PASSENGER_H 
 using namespace std;
-class passenger{
+class passenger: base{
 	private:
 	string name;
 	int x,y;

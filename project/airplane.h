@@ -1,12 +1,13 @@
 #include<iostream>
 #include<list>
 #include<iterator>
+#include"base.h"
 #include<string>
 #include"airfiled.h"
 #ifndef AIRPLANE_H 
 #define AIRPLANE_H 
 using namespace std;
-class airplane {
+class airplane: base {
 	int x,y;
 	string name;
 	int range;

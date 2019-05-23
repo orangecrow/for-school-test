@@ -1,5 +1,6 @@
 #include<iostream>
 #include<list>
+#include"base.h"
 #include<iterator>
 #include<string>
 #include"airplane.h"
@@ -7,7 +8,7 @@
 #ifndef AIRFILED_H 
 #define AIRFILED_H 
 using namespace std;
-class airfiled{
+class airfiled: base{
 	string name;
 	int x,y;
 	list<passenger> people;
