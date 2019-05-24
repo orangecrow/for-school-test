@@ -1,3 +1,5 @@
+#ifndef PASSENGER_H 
+#define PASSENGER_H 
 #include<iostream>
 #include<list>
 #include<iterator>
@@ -6,8 +8,6 @@
 #include"airfield.h"
 #include"item.h"
 #include"base.h"
-#ifndef PASSENGER_H 
-#define PASSENGER_H 
 using namespace std;
 class passenger: public base{
 	private:
@@ -15,7 +15,7 @@ class passenger: public base{
 	base *my_location;
 	public:
 	passenger(string name, int x, int y);
-	passenger(): name("John Smith") {}
+	passenger():  {name="John Smith";}
 	~passenger();
 	int add_item(item);
 	int remove_item(item);
@@ -25,6 +25,6 @@ class passenger: public base{
 	int enter(airplane);
 	int leave();
 	list<item> show_items();
-}
+};
 #endif
 
