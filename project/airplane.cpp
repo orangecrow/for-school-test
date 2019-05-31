@@ -2,7 +2,8 @@
 int airplane::fly(airfield destination){
 	icv=1;
 	if(distance(get_pos(),destination.get_pos())<=range){
-		my_location->get_out(*this);
+		if(my_location!=NULL)
+			my_location->get_out(*this);
 		my_location=&destination;
 		destination.get_in(*this);
 	}
