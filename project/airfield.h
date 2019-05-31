@@ -23,7 +23,7 @@ class airfield: public base{
 	int check_luggage(passenger);
 	airfield()  {name="generic airfied";}
 	airfield(string name, int x , int y ); 
-	~airfield();
+	~airfield(){};
 	list<airplane> show_planes();
 };
 #endif

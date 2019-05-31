@@ -10,12 +10,13 @@ int airfield::get_in(passenger b){
 } 
 int airfield::get_out(passenger b){
 	if(b.get_icv()){
-		list<passenger>::iterator it;
+		/*list<passenger>::iterator it;
 		for(it=people.begin(); it!=people.end(); ++it ) {
 			if(*it==b){
 				it=people.erase(it);
 			}
-		}
+		}*/
+		people.remove(b);
 		return 1;
 	}
 	return 0;
@@ -29,12 +30,13 @@ int airfield::get_in(airplane b){
 } 
 int airfield::get_out(airplane b){
 	if(b.get_icv()){
-		list<airplane>::iterator it;
+	/*	list<airplane>::iterator it;
 		for( it=planes.begin(); it!=planes.end(); ++it ) {
 			if(*it==b){
 				it=planes.erase(it);
 			}
-		}
+		}*/
+		planes.remove(b);
 		return 1;
 	}
 	return 0;

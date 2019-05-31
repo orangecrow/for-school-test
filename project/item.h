@@ -12,7 +12,7 @@ class item: public base{
 	public:
 	safety get_type();
 	item(string, safety);
-	~item();
+	~item(){};
 	item(): type(SAFE){name="tooth brush";};
 };
 #endif

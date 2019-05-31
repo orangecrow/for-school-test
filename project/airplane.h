@@ -20,10 +20,10 @@ class airplane: public base {
 	int check_luggage(passenger);
 	int get_in(passenger b);
 	airplane(int seat_number, int range, int x ,int y);
-	~airplane();
+	~airplane(){};
 	airplane(): capacity(20), range(400)  {name="DC-10";}
-	int set_messege(string);
-	string display_messege();
+	int set_messege(string){};
+	string display_messege(){};
 	int fly(airfield destination);
 };
 #endif

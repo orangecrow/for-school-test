@@ -6,6 +6,9 @@ passenger::passenger(string name, int x, int y){
 	this->name=name;
 }
 
+passenger::~passenger(){
+
+}
 int passenger::enter(airfield a){
 	icv=1;
 	a.get_in(*this);
