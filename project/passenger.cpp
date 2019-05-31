@@ -1,4 +1,5 @@
 #include"passenger.h"
+#include<list>
 passenger::passenger(string name, int x, int y){
 	a.x=x;
 	a.y=y;
@@ -7,7 +8,7 @@ passenger::passenger(string name, int x, int y){
 
 int passenger::enter(airfield a){
 	icv=1;
-	a.get_in(*this)
+	a.get_in(*this);
 	my_location=&a;
 	icv=0;
 }
@@ -20,7 +21,8 @@ int passenger::enter(airplane a){
 }
 
 int passenger::leave(){
-	my_location=my_location->get_out(*this);
+	if(get_out(*this))
+		my_location=NULL;//my_location->get_out(*this);
 }
 
 int passenger::add_item (item a){
@@ -28,26 +30,28 @@ int passenger::add_item (item a){
 }
 
 int passenger::remove_item(item b){
-	auto it;
+	luggage.remove(b);
+}
+
+list<item> passenger::show_items(){
+	return luggage;
+}
+
+/*	
+	list<item>::iterator it;
 	for( it=luggage.begin(); it!=luggage.end(); ++it )
 	{
 		if(*it==b){
 			it=erase(it);
 		}
 	}
-}
-
-list<item> passenger::show_items(){
-	return luggage;
-}
 int passenger::remove_item(list<item>){
 
 }
 int passenger::add_item(list<item>){
 
 }
-
-/*	list<item>::iterator it;
+list<item>::iterator it;
 	for( it=luggage.begin(); it!=luggage.end(); ++it )
 	{
 		cout<< it.name <<'\n';

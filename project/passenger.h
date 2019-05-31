@@ -9,13 +9,16 @@
 #include"item.h"
 #include"base.h"
 using namespace std;
+class airplane;
+class airfield;
 class passenger: public base{
 	private:
 	list<item> luggage;
 	base *my_location;
 	public:
+	base* get_my_location(){return my_location;};
 	passenger(string name, int x, int y);
-	passenger():  {name="John Smith";}
+	passenger()  {name="John Smith";}
 	~passenger();
 	int add_item(item);
 	int remove_item(item);

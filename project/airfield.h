@@ -8,18 +8,20 @@
 #include"airplane.h"
 #include"passenger.h"
 using namespace std;
+class airplane;
+class passenger;
 class airfield: public base{
 	list<passenger> people;
 	list<airfield> others;
 	list<airplane> planes;
 	public:
-	get_in(passenger);
-	get_out(passenger);
-	get_out(airplane);
-	get_in(airplane);
-	//-----vuser functions
+	int get_in(passenger);
+	int get_out(passenger);
+	int get_out(airplane);
+	int get_in(airplane);
+	//-----user functions
 	int check_luggage(passenger);
-	airfield():  {name="generic airfied";}
+	airfield()  {name="generic airfied";}
 	airfield(string name, int x , int y ); 
 	~airfield();
 	list<airplane> show_planes();

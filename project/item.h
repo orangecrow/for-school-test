@@ -10,9 +10,10 @@ enum safety {SAFE ,NOTSAFE};
 class item: public base{
 	safety type;
 	public:
+	safety get_type();
 	item(string, safety);
 	~item();
-	item(): , type(SAFE){name="tooth brush";};
+	item(): type(SAFE){name="tooth brush";};
 };
 #endif
 
