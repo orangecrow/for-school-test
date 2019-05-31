@@ -10,22 +10,24 @@ passenger::~passenger(){
 
 }
 int passenger::enter(airfield a){
-	icv=1;
-	a.get_in(*this);
-	my_location=&a;
-	icv=0;
+	if(distance(get_pos(),a.get_pos())<=2){
+		a.get_in(*this);
+		my_location=&a;
+	}
 }
 
 int passenger::enter(airplane a){
-	icv=1;
-	if(a.get_in(*this))
-		my_location=&a;
-	icv=0;
+	//if(my_location!=NULL&&my_location->does_have(a)){
+		if(a.get_in(*this))
+			my_location=&a;
+	//}
 }
 
 int passenger::leave(){
 	if(get_out(*this))
 		my_location=NULL;//my_location->get_out(*this);
+	else;
+		//my_location=my_location->get_my_location();
 }
 
 int passenger::add_item (item a){

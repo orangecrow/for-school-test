@@ -2,44 +2,17 @@
 #include<list>
 using namespace std;
 int airfield::get_in(passenger b){
-	if(b.get_icv()){
-		people.push_front(b);
-		return 1;
-	}
-	return 0;
+	people.push_front(b);
 } 
 int airfield::get_out(passenger b){
-	if(b.get_icv()){
-		/*list<passenger>::iterator it;
-		for(it=people.begin(); it!=people.end(); ++it ) {
-			if(*it==b){
-				it=people.erase(it);
-			}
-		}*/
-		people.remove(b);
-		return 1;
-	}
-	return 0;
+	people.remove(b);
+	return 1;
 } 
 int airfield::get_in(airplane b){
-	if(b.get_icv()){
-		planes.push_front(b);
-		return 1;
-	}
-	return 0;
+	planes.push_front(b);
 } 
 int airfield::get_out(airplane b){
-	if(b.get_icv()){
-	/*	list<airplane>::iterator it;
-		for( it=planes.begin(); it!=planes.end(); ++it ) {
-			if(*it==b){
-				it=planes.erase(it);
-			}
-		}*/
-		planes.remove(b);
-		return 1;
-	}
-	return 0;
+	planes.remove(b);
 } 
 airfield::airfield(string name, int x , int y ){
 	a.x=x;

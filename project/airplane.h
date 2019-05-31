@@ -19,6 +19,7 @@ class airplane: public base {
 	airfield* get_my_location(){return my_location;};
 	int check_luggage(passenger);
 	int get_in(passenger b);
+	int get_out(passenger b);
 	airplane(int seat_number, int range, int x ,int y);
 	~airplane(){};
 	airplane(): capacity(20), range(400)  {name="DC-10";}
