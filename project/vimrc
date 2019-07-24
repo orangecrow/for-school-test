@@ -1,3 +1,6 @@
+set number
+set bs=2
+set relativenumber              
 set shiftwidth=4
 set tabstop=4
 map <Space> <C-w>
